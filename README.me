@@ -1,7 +1,7 @@
 # EDGE Performance Test | Locust
 
 ## Description
-This project contains the performance tests for the following Edge resources `Pipeline Core`, `Spark`, etc.
+This project contains the performance tests for the following Edge resources 'Pipeline Core', 'Spark', etc.
 
 ## Setup
 1. Install Python :
@@ -25,6 +25,7 @@ qe-performance-test/
 │   │   ├── endpoint2.py
 │   │   └── ...
 │   └── locustfile.py
+│   └── run_Spark.sh
 │
 ├── Pipelinecore/
 │   ├── endpoints/
@@ -32,7 +33,7 @@ qe-performance-test/
 │   │   ├── endpoint2.py
 │   │   └── ...
 │   └── locustfile.py
-│
+│   └── run_PipelineCore.sh
 └── common/
     ├── base_page.py
     └── utils.py
@@ -44,7 +45,13 @@ locust -f [projectFolder]/locustfile.py --host=<TARGET_HOST>
 ```
 Replace `<TARGET_HOST>` with your target server URL.
 
-## Reporting
-Locust provides a web UI for monitoring test performance at `http://localhost:8089`.
+## Alternate: Running Tests
+ This bash file will contain the commands to run each project and more importantly keep an historical report html file 
+```
+./run_[projectFolder name].sh  
+```
 
-All config folders are ignored. CICD will have its own configs.
+## Reporting
+Locust provides a web UI for monitoring test performance at 'http://localhost:8089'.
+
+All config folders are ignored. CI/CD will have its own configs.

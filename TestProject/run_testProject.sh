@@ -1,0 +1,1 @@
+locust -f TestProject/locustfile.py --host=https://car-api2.p.rapidapi.com -u 5 -r 5 --run-time 10s --html=TestProject/reports/report_$(date +%Y%m%d_%H%M%S).html

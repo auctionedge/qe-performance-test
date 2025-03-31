@@ -26,4 +26,7 @@ class GetBodies(BasePage):
             'Host': 'car-api2.p.rapidapi.com'
         }
         response = self.get("/api/bodies?sort=id&verbose=yes&direction=asc", headers=headers)
+        
+        # if response.status_code == 200:
+        #     self.environment.runner.quit()
         return response
