@@ -15,7 +15,7 @@ class PostEblockAuth(BasePage):
     def fetch_data(self):
         headers = {
             'Connection': 'keep-alive',
-            'Authorization': 'Token token=74ca558f-76eb-4447-ab80-b676750b1704',
+            'Authorization': 'Token token='+config.EBLOCK_PASSPORT_TOKEN,
             'Accept': 'application/json',
             'Content-Type': 'application/json',
             'Host': 'staging.edgepipeline.com'
