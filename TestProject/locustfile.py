@@ -2,6 +2,14 @@ from locust import HttpUser, task, between
 from endpoints.get_vin_info import GetBodies
 from endpoints.get_vin_info import GetVinInfo
 
+# Define the global variable
+global_variables = {}
+
+# Function to save a variable
+def save_variable(key, value):
+    global global_variables
+    global_variables[key] = value
+
 class TestProject(HttpUser):
     wait_time = between(1, 5)
 
