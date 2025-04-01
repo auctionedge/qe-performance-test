@@ -3,7 +3,6 @@ from common.base_page import BasePage
 import config.staging as config
 
 
-# Define the global variable
 global_variables = {}
 
 # Function to save a variable
